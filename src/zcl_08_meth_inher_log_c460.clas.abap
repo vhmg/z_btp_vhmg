@@ -1,0 +1,39 @@
+CLASS zcl_08_meth_inher_log_c460 DEFINITION
+  PUBLIC
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    TYPES: BEGIN OF ty_name,
+             name TYPE string,
+           END OF ty_name.
+
+    CONSTANTS: c1 TYPE c LENGTH 1 VALUE 'c'.
+
+    DATA: gt_name TYPE TABLE OF ty_name.
+
+    METHODS:
+      set_name
+        IMPORTING
+          is_name TYPE ty_name,
+
+      set_meth FINAL.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZCL_08_METH_INHER_LOG_C460 IMPLEMENTATION.
+
+
+  METHOD set_name.
+    APPEND is_name TO gt_name.
+  ENDMETHOD.
+
+
+  METHOD set_meth.
+
+  ENDMETHOD.
+ENDCLASS.
